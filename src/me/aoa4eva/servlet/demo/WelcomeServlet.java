@@ -30,10 +30,8 @@ public class WelcomeServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
-		String welcomeMessage = "Hello";
-		request.setAttribute("welcome",welcomeMessage); 
-		RequestDispatcher rd = request.getRequestDispatcher("welcome.jsp");
-		rd.forward(request,response);
+			RequestDispatcher rd = request.getRequestDispatcher("index.html");
+		    rd.forward(request,response);
 	}
 
 	/**
